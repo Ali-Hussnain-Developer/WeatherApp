@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_below="@id/layoutSearchBar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_10dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/locationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:fontFamily="@font/font"
+        android:gravity="center"
+        android:padding="@dimen/_5dp"
+        android:text="@string/txt_lahore"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sp"
+       />
+
+    <RelativeLayout
+        android:id="@+id/layoutSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:background="@drawable/curve_layout_edt">
+
+        <EditText
+            android:id="@+id/search_view_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imgSearch"
+            android:backgroundTint="@color/white"
+            android:hint="@string/txt_enter_city"
+            android:inputType="text"
+            android:paddingStart="@dimen/_10dp"
+
+            >
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_icon"
+            app:tint="#403E3E" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/locationValue">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            app:cardCornerRadius="@dimen/_10dp"
+            app:cardElevation="@dimen/_10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/imgWeatherIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:src="@drawable/haze" />
+
+                <TextView
+                    android:id="@+id/tvTemperatureValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_temp_value"
+                    android:layout_toStartOf="@+id/imgCelcius"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_50sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgCelcius"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_marginVertical="@dimen/_10dp"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:src="@drawable/degree_celcius"
+                    app:tint="@color/black" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_10dp">
+
+                <TextView
+                    android:id="@+id/tvHumidityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5dp"
+                    android:text="@string/txt_humidity"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sp"/>
+
+                <TextView
+                    android:id="@+id/tvHumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5dp"
+                    android:text="@string/txt_humidity_value"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvTemp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/single_layout_rv" />
+    </RelativeLayout>
+</RelativeLayout>

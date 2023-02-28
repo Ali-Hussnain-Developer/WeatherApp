@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="@dimen/_5dp"
+    app:cardCornerRadius="@dimen/_5dp"
+    app:cardElevation="@dimen/_10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgIconRv"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_5dp"
+            android:src="@drawable/haze"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/layoutTempRv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgIconRv"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/tvTemperatureValueRv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginVertical="@dimen/_5dp"
+                android:layout_below="@+id/imgIconRv"
+                android:src="@drawable/degree_celcius"
+                tools:ignore="ObsoleteLayoutParam" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimeRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTempRv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:gravity="center"
+            android:text="2:10am"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

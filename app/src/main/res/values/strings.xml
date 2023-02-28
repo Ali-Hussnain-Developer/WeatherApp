@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="txt_app_name">Weather App</string>
+    <string name="txt_by_ali">Developed By Ali Hussnain</string>
+    <string name="txt_enter_city">Enter Your City</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_location">Location</string>
+    <string name="txt_temperature">Temperature</string>
+    <string name="txt_lahore">Lahore</string>
+    <string name="txt_temp_value">22</string>
+    <string name="txt_humidity">Humidity</string>
+    <string name="txt_humidity_value">25</string>
+    <string name="txt_connected">Connected with Internet</string>
+    <string name="txt_not_connected">Not Connected with Internet</string>
+    <string name="txt_error">Error</string>
+    <string name="txt_enter_text">Please Enter a city</string>
+</resources>
